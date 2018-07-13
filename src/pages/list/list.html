@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-toolbar no-border-top>
+    <ion-searchbar placeholder="Municípios" (ionInput)="getMunicipios($event)"></ion-searchbar>
+  </ion-toolbar>
+    <!--<ion-title>Municípios</ion-title>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let municipios of municipios" (click)="itemTapped($event, municipios)">
+      <ion-card>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Alagoas_Municip_AguaBranca.svg/1261px-Alagoas_Municip_AguaBranca.svg.png"/>
+        <div class="card-title">{{municipios}}</div>
+      </ion-card>
+      <!--<ion-icon name="{{item.icon}}" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>-->
+    </button>
+  </ion-list>
+</ion-content>
