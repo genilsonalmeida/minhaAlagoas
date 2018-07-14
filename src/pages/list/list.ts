@@ -9,27 +9,30 @@ import { ItemDetailsPage } from '../item-details/item-details';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  municipios: Array<string> = ['Água Branca','Anadia','Arapiraca','Atalaia','Barra de Santo Antônio','Barra de São Miguel','Batalha','Belém','Belo Monte'];
+  municipios: Array<string>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.procurarMunicipios();
-  }
-  
-  procurarMunicipios() {
-    this.municipios;
+    
   }
 
-  getMunicipios(ev) {
+  ngOnInit() {
+    this.setMunicipios();
+  }
+
+  setMunicipios() {
+    this.municipios = ['Água Branca','Anadia','Arapiraca','Atalaia','Barra de Santo Antônio','Barra de São Miguel','Batalha','Belém','Belo Monte'];
+  }
+
+  filterMunicipios(ev: any) {
     // Reset items back to all of the items
-    this.procurarMunicipios();
-
+    this.setMunicipios();
     // set val to the value of the ev target
     var val = ev.target.value;
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.municipios = this.municipios.filter((municipios) => {
-        return (municipios.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.municipios = this.municipios.filter(function(municipios) {
+        return municipios.toLowerCase().includes(val.toLowerCase());
       })
     }
   }
