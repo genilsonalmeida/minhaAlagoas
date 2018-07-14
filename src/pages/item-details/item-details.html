@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle *ngIf="selectedMunicipios">
+    <button menuToggle *ngIf="!selectedMunicipios">
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title *ngIf="selectedMunicipios">{{selectedMunicipios}}</ion-title>
