@@ -7,6 +7,7 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { QuizPage } from '../pages/quiz/quiz';
 
 
 @Component({
@@ -30,7 +31,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Home', component: HelloIonicPage },
-      { title: 'Municípios', component: ListPage }
+      { title: 'Municípios', component: ListPage },
+      { title: 'Quiz', component: QuizPage }
     ];
   }
 

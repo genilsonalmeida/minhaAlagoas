@@ -10,9 +10,20 @@ import { ItemDetailsPage } from '../item-details/item-details';
 })
 export class ListPage {
   municipios: Array<string>;
+  toggled: boolean = false;
+  title: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+    this.toggled = false;
+  }
+
+  toggle(): void {
+    this.toggled = this.toggled ? false : true;
+    this.title = true;
+  }
+
+  cancelSearch($event){
+    this.toggle();
   }
 
   ngOnInit() {

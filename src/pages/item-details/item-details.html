@@ -10,12 +10,16 @@
 <ion-content>
     <ion-card>
         <img height="160" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Igreja_Matriz_de_Nossa_Senhora_da_Concei%C3%A7%C3%A3o_-_%C3%81gua_Branca_AL.jpg/1280px-Igreja_Matriz_de_Nossa_Senhora_da_Concei%C3%A7%C3%A3o_-_%C3%81gua_Branca_AL.jpg"/>
-        <div class="card-title">{{selectedMunicipios}}</div>
+        <ion-card-content>
+            <ion-card-title>
+                Nine Inch Nails Live
+                </ion-card-title>
+                <h3 text-align padding>
+                    Descrição da cidade com dados atualizados de população e colocar a parte histórica dela.
+                  </h3>
+                  <h4 text-center *ngIf="selectedMunicipios">
+                    You navigated here from <b>{{selectedMunicipios}}</b>
+                  </h4>
+        </ion-card-content>
       </ion-card>
-  <h3 text-align padding>
-    Descrição da cidade com dados atualizados de população e colocar a parte histórica dela.
-  </h3>
-  <h4 text-center *ngIf="selectedMunicipios">
-    You navigated here from <b>{{selectedMunicipios}}</b>
-  </h4>
 </ion-content>
