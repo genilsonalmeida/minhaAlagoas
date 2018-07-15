@@ -24,6 +24,7 @@ export class ListPage {
 
   cancelSearch($event){
     this.toggle();
+    this.title = false;
   }
 
   ngOnInit() {
