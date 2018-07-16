@@ -10,14 +10,14 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { QuizPage } from '../pages/quiz/quiz';
-import { LoginPage } from '../pages/login/login';
+import { TutorialPage } from '../pages/tutorial/tutorial';
 
 @NgModule({
   declarations: [
     MyApp,
+    TutorialPage,
     HelloIonicPage,
     ItemDetailsPage,
-    LoginPage,
     QuizPage,
     ListPage
   ],
@@ -28,10 +28,10 @@ import { LoginPage } from '../pages/login/login';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    TutorialPage,
     HelloIonicPage,
     ItemDetailsPage,
     QuizPage,
-    LoginPage,
     ListPage
   ],
   providers: [
