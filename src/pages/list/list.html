@@ -8,9 +8,7 @@
           *ngIf="toggled"
           [(ngModel)]="someValue"
           (ionInput)="filterMunicipios($event)"
-          (ionCancel)="cancelSearch($event)"
-          (ionClear) = "cancelSearch($event)"
-          [showCancelButton]="false">
+          (ionCancel)="cancelSearch($event)">
         </ion-searchbar>
         <ion-title *ngIf="!title">Municípios</ion-title>
         <ion-buttons end *ngIf="!toggled">
@@ -27,11 +25,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Alagoas_Municip_AguaBranca.svg/1261px-Alagoas_Municip_AguaBranca.svg.png"/>
         <div class="card-title">{{municipios}}</div>
       </ion-card>
-      <!--<ion-icon name="{{item.icon}}" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>-->
     </button>
   </ion-list>
 </ion-content>
